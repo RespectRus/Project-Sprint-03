@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,12 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sprint_3_Register" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEP-eu-cJO">
-                                <rect key="frame" x="22" y="524" width="331" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEP-eu-cJO">
+                                <rect key="frame" x="20" y="524" width="390" height="59"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -34,12 +33,11 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fY3-To-gLK"/>
+                                    <action selector="addCounterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0H-QD-v29"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-mq-bwI">
-                                <rect key="frame" x="22" y="628" width="331" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-mq-bwI">
+                                <rect key="frame" x="20" y="603" width="390" height="34.333333333333371"/>
                                 <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -48,9 +46,8 @@
                                     <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jyu-7C-WTO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6l-NK-r9B">
-                                <rect key="frame" x="16" y="371" width="343" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6l-NK-r9B">
+                                <rect key="frame" x="20" y="371" width="390" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,16 +55,27 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hNw-mq-bwI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5nu-K4-xdX"/>
+                            <constraint firstItem="GEP-eu-cJO" firstAttribute="top" secondItem="f6l-NK-r9B" secondAttribute="bottom" constant="123" id="H9B-rz-jd5"/>
+                            <constraint firstItem="GEP-eu-cJO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="POj-Ld-oZQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f6l-NK-r9B" secondAttribute="trailing" constant="20" id="Yc5-bp-Tkm"/>
+                            <constraint firstItem="f6l-NK-r9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="312" id="akn-xO-nLQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GEP-eu-cJO" secondAttribute="trailing" constant="20" id="erY-vZ-kd2"/>
+                            <constraint firstItem="hNw-mq-bwI" firstAttribute="top" secondItem="GEP-eu-cJO" secondAttribute="bottom" constant="20" id="uBX-7Y-ScT"/>
+                            <constraint firstItem="f6l-NK-r9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xSV-oI-FAn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hNw-mq-bwI" secondAttribute="trailing" constant="20" id="zTL-yD-SwU"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="registerLabel" destination="f6l-NK-r9B" id="9Yl-9A-h4x"/>
-                        <outlet property="registerTouchButton" destination="GEP-eu-cJO" id="8zc-ec-ybb"/>
+                        <outlet property="addCounterButton" destination="GEP-eu-cJO" id="8zc-ec-ybb"/>
+                        <outlet property="counterLabel" destination="f6l-NK-r9B" id="9Yl-9A-h4x"/>
                         <outlet property="resetButton" destination="hNw-mq-bwI" id="1Dx-hx-lPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="-28.817733990147783"/>
+            <point key="canvasLocation" x="129.76744186046511" y="-28.969957081545065"/>
         </scene>
     </scenes>
     <resources>

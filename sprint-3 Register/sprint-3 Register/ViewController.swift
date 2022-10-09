@@ -9,31 +9,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var registerLabel: UILabel!
-    
-    @IBOutlet weak var registerTouchButton: UIButton!
+    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var addCounterButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
-    private var num = 0
+    
+    private var number = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerLabel.text = "Значения счетчика: \(num)"
+        counterText()
         
-        registerTouchButton.setTitle("Добавить", for: .normal)
-        registerTouchButton.backgroundColor = .gray
+        addCounterButton.setTitle("Добавить", for: .normal)
+        addCounterButton.backgroundColor = .gray
         
         resetButton.setTitle("Сбросить", for: .normal)
         resetButton.backgroundColor = .red
        
     }
 
-    @IBAction func registerAction(_ sender: Any) {
-        num += 1
-        registerLabel.text = "Значения счетчика: \(num)"
+    @IBAction func addCounterAction(_ sender: Any) {
+        number += 1
+        counterText()
     }
     @IBAction func resetAction(_ sender: Any) {
-        num = 0
-        registerLabel.text = "Значение счетчика: \(num)"
+        number = 0
+        counterText()
     }
+    
+    
+    func counterText() {
+        counterLabel.text = "Значения счетчика: \(number)"
+    }
+
     
 }
 
